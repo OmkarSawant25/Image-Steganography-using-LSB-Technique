@@ -60,6 +60,18 @@ This makes the image **visually identical** while carrying hidden data.
 
 ---
 
+## 🧾 Decoding Process
+1. **Validate & Open Encoded Image**
+2. **Skip BMP Header (54 bytes)**
+3. **Verify Magic String**
+4. **Decode Extension Size**
+5. **Decode Extension Name**
+6. **Decode File Size**
+7. **Decode File Data**
+8. **Reconstruct Secret File**
+
+---
+
 ## 🧰 Data Structures
 
 ### `EncodeInfo` (from `encode.h`)
@@ -91,19 +103,6 @@ typedef struct _DecodeInfo {
     char extn_secret_file[5];
     long size_secret_file;
 } DecodeInfo;
-
-
----
-
-## 🧾 Decoding Process
-1. **Validate & Open Encoded Image**
-2. **Skip BMP Header (54 bytes)**
-3. **Verify Magic String**
-4. **Decode Extension Size**
-5. **Decode Extension Name**
-6. **Decode File Size**
-7. **Decode File Data**
-8. **Reconstruct Secret File**
 
 ---
 
@@ -211,6 +210,6 @@ Run examples:
 📍 *Bengaluru, Karnataka, India*  
 💡 *Passionate about Embedded System.*
 
-'''
+```
 "Code. Hide. Reveal."
-'''
+```
